@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B41CB77B24587B2200BC8958 /* CreateNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B41CB77A24587B2200BC8958 /* CreateNoteViewController.swift */; };
+		B41CB77D24587B4900BC8958 /* ReminderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B41CB77C24587B4900BC8958 /* ReminderViewController.swift */; };
+		B41CB77F24587B8700BC8958 /* SpillTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B41CB77E24587B8700BC8958 /* SpillTableViewCell.swift */; };
+		B41CB78124587C3C00BC8958 /* SpillTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B41CB78024587C3C00BC8958 /* SpillTableViewController.swift */; };
+		B41CB783245889F600BC8958 /* CreateNote.swift in Sources */ = {isa = PBXBuildFile; fileRef = B41CB782245889F600BC8958 /* CreateNote.swift */; };
 		B48FAE012457405200D4A3EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48FAE002457405200D4A3EE /* AppDelegate.swift */; };
 		B48FAE032457405200D4A3EE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48FAE022457405200D4A3EE /* SceneDelegate.swift */; };
 		B48FAE082457405200D4A3EE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B48FAE062457405200D4A3EE /* Main.storyboard */; };
@@ -15,6 +20,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B41CB77A24587B2200BC8958 /* CreateNoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNoteViewController.swift; sourceTree = "<group>"; };
+		B41CB77C24587B4900BC8958 /* ReminderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderViewController.swift; sourceTree = "<group>"; };
+		B41CB77E24587B8700BC8958 /* SpillTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpillTableViewCell.swift; sourceTree = "<group>"; };
+		B41CB78024587C3C00BC8958 /* SpillTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpillTableViewController.swift; sourceTree = "<group>"; };
+		B41CB782245889F600BC8958 /* CreateNote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNote.swift; sourceTree = "<group>"; };
 		B48FADFD2457405200D4A3EE /* CreateDaily.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CreateDaily.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B48FAE002457405200D4A3EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B48FAE022457405200D4A3EE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -35,6 +45,37 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B41CB7842458D96200BC8958 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B48FAE002457405200D4A3EE /* AppDelegate.swift */,
+				B48FAE022457405200D4A3EE /* SceneDelegate.swift */,
+				B48FAE092457405400D4A3EE /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		B41CB7852458D97400BC8958 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				B48FAE062457405200D4A3EE /* Main.storyboard */,
+				B41CB782245889F600BC8958 /* CreateNote.swift */,
+				B48FAE0B2457405400D4A3EE /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		B41CB7862458D9A100BC8958 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B41CB78024587C3C00BC8958 /* SpillTableViewController.swift */,
+				B41CB77A24587B2200BC8958 /* CreateNoteViewController.swift */,
+				B41CB77C24587B4900BC8958 /* ReminderViewController.swift */,
+				B41CB7842458D96200BC8958 /* Resources */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
 		B48FADF42457405200D4A3EE = {
 			isa = PBXGroup;
 			children = (
@@ -54,11 +95,9 @@
 		B48FADFF2457405200D4A3EE /* CreateDaily */ = {
 			isa = PBXGroup;
 			children = (
-				B48FAE002457405200D4A3EE /* AppDelegate.swift */,
-				B48FAE022457405200D4A3EE /* SceneDelegate.swift */,
-				B48FAE062457405200D4A3EE /* Main.storyboard */,
-				B48FAE092457405400D4A3EE /* Assets.xcassets */,
-				B48FAE0B2457405400D4A3EE /* LaunchScreen.storyboard */,
+				B41CB7852458D97400BC8958 /* Storyboards */,
+				B41CB7862458D9A100BC8958 /* View Controllers */,
+				B41CB77E24587B8700BC8958 /* SpillTableViewCell.swift */,
 				B48FAE0E2457405400D4A3EE /* Info.plist */,
 			);
 			path = CreateDaily;
@@ -135,7 +174,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B41CB77D24587B4900BC8958 /* ReminderViewController.swift in Sources */,
+				B41CB77F24587B8700BC8958 /* SpillTableViewCell.swift in Sources */,
 				B48FAE012457405200D4A3EE /* AppDelegate.swift in Sources */,
+				B41CB783245889F600BC8958 /* CreateNote.swift in Sources */,
+				B41CB77B24587B2200BC8958 /* CreateNoteViewController.swift in Sources */,
+				B41CB78124587C3C00BC8958 /* SpillTableViewController.swift in Sources */,
 				B48FAE032457405200D4A3EE /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

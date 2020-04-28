@@ -17,6 +17,9 @@
                         <subviews>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="fFF-ST-cYF">
                                 <rect key="frame" x="0.0" y="254" width="414" height="216"/>
+                                <connections>
+                                    <action selector="datePickerSwiped:" destination="KXf-x1-xv9" eventType="valueChanged" id="cJa-oS-Qbo"/>
+                                </connections>
                             </datePicker>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Set the date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r64-4m-Lgv">
                                 <rect key="frame" x="138.5" y="198" width="137" height="48"/>
@@ -27,6 +30,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j1D-jB-iwf">
                                 <rect key="frame" x="143.5" y="478" width="127" height="30"/>
                                 <state key="normal" title="Ready, set, note it."/>
+                                <connections>
+                                    <action selector="dateSetTapped:" destination="KXf-x1-xv9" eventType="touchUpInside" id="hbp-KC-TQO"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -44,34 +50,27 @@
                     <navigationItem key="navigationItem" id="U26-5M-D7u"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vAM-gs-meo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="KXf-x1-xv9" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="3852.1739130434785" y="416.51785714285711"/>
+            <point key="canvasLocation" x="3897" y="421"/>
         </scene>
-        <!--View Controller-->
+        <!--Create Note View Controller-->
         <scene sceneID="LFs-ch-Fcb">
             <objects>
-                <viewController id="6dx-OS-R30" sceneMemberID="viewController">
+                <viewController id="6dx-OS-R30" customClass="CreateNoteViewController" customModule="CreateDaily" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="SlE-5Y-wLj">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tabBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Gjg-eb-yQY">
-                                <rect key="frame" x="0.0" y="813" width="414" height="49"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <items>
-                                    <tabBarItem title="Reminders" image="calendar" catalog="system" id="2xZ-Oi-gLv"/>
-                                    <tabBarItem title="Notes" image="square.and.pencil" catalog="system" id="HAP-DH-waZ"/>
-                                </items>
-                            </tabBar>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" spacing="102" translatesAutoresizingMaskIntoConstraints="NO" id="ue0-1P-Cns">
-                                <rect key="frame" x="78" y="430" width="243" height="36"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="102" translatesAutoresizingMaskIntoConstraints="NO" id="ue0-1P-Cns">
+                                <rect key="frame" x="85.5" y="430" width="243" height="36"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="toh-tv-AiH">
                                         <rect key="frame" x="0.0" y="0.0" width="98" height="36"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <state key="normal" title="Remind me"/>
                                         <connections>
+                                            <action selector="noteReminderTapped:" destination="6dx-OS-R30" eventType="touchUpInside" id="1fB-LM-cLg"/>
                                             <segue destination="rBz-Od-goQ" kind="show" identifier="ReminderSegue" id="9Ej-Vu-qTj"/>
                                         </connections>
                                     </button>
@@ -79,6 +78,9 @@
                                         <rect key="frame" x="200" y="0.0" width="43" height="36"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <state key="normal" title="Save"/>
+                                        <connections>
+                                            <action selector="saveNoteTapped:" destination="6dx-OS-R30" eventType="touchUpInside" id="sO5-a4-35j"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -89,47 +91,70 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="7CF-Ti-MoY">
-                                <rect key="frame" x="29" y="189" width="356" height="212"/>
+                                <rect key="frame" x="29" y="223" width="356" height="178"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Note Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Eoa-1x-B6Z">
+                                <rect key="frame" x="29" y="181" width="356" height="34"/>
+                                <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="PUf-ce-EWC" firstAttribute="top" secondItem="tS0-cd-aLD" secondAttribute="top" constant="26" id="Bv7-3Z-Ekz"/>
+                            <constraint firstItem="ue0-1P-Cns" firstAttribute="centerX" secondItem="SlE-5Y-wLj" secondAttribute="centerX" id="EAm-ti-eJi"/>
+                            <constraint firstItem="ue0-1P-Cns" firstAttribute="centerY" secondItem="SlE-5Y-wLj" secondAttribute="centerY" id="IWg-JX-7hU"/>
+                            <constraint firstItem="tS0-cd-aLD" firstAttribute="trailing" secondItem="Eoa-1x-B6Z" secondAttribute="trailing" constant="29" id="J32-rR-H0h"/>
+                            <constraint firstItem="Eoa-1x-B6Z" firstAttribute="top" secondItem="PUf-ce-EWC" secondAttribute="bottom" constant="19" id="M6a-ZB-A0m"/>
+                            <constraint firstItem="Eoa-1x-B6Z" firstAttribute="centerX" secondItem="SlE-5Y-wLj" secondAttribute="centerX" id="kom-wR-qHZ"/>
                             <constraint firstItem="PUf-ce-EWC" firstAttribute="centerX" secondItem="SlE-5Y-wLj" secondAttribute="centerX" id="z4r-6E-3sr"/>
+                            <constraint firstItem="Eoa-1x-B6Z" firstAttribute="leading" secondItem="tS0-cd-aLD" secondAttribute="leading" constant="29" id="z6r-8y-YCF"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="tS0-cd-aLD"/>
                     </view>
                     <navigationItem key="navigationItem" id="jCg-FE-E4a"/>
+                    <connections>
+                        <outlet property="noteTextView" destination="7CF-Ti-MoY" id="rFy-12-wf7"/>
+                        <outlet property="noteTitleTextField" destination="Eoa-1x-B6Z" id="7Vt-nd-rPO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NbK-Ss-pRk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3897.1014492753625" y="-312.05357142857139"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Create, Daily-->
         <scene sceneID="fXJ-Y4-du6">
             <objects>
-                <tableViewController id="tYo-rP-RWe" sceneMemberID="viewController">
+                <tableViewController id="tYo-rP-RWe" customClass="SpillTableViewController" customModule="CreateDaily" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Bhg-OP-i9g">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="144" id="XFQ-vR-XR9">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SpillCell" textLabel="7xN-TZ-IVy" detailTextLabel="Lmp-WD-LmV" rowHeight="144" style="IBUITableViewCellStyleSubtitle" id="RRf-KM-wGQ">
                                 <rect key="frame" x="0.0" y="28" width="414" height="144"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="XFQ-vR-XR9" id="Z2R-gw-Ubn">
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="RRf-KM-wGQ" id="Zsj-nS-H9c">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="144"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Spill" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H1D-zn-bts">
-                                            <rect key="frame" x="184" y="57" width="46" height="30"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="7xN-TZ-IVy">
+                                            <rect key="frame" x="20" y="52" width="33.5" height="20.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Lmp-WD-LmV">
+                                            <rect key="frame" x="20" y="75.5" width="44" height="14.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -137,12 +162,13 @@
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
+                        <sections/>
                         <connections>
                             <outlet property="dataSource" destination="tYo-rP-RWe" id="6Ou-Ru-Sdf"/>
                             <outlet property="delegate" destination="tYo-rP-RWe" id="XDR-rK-LuS"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="vg2-Zr-FTy">
+                    <navigationItem key="navigationItem" title="Create, Daily" id="vg2-Zr-FTy">
                         <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="BOq-lN-aLO">
                             <connections>
                                 <segue destination="6dx-OS-R30" kind="show" identifier="CreateNoteSegue" id="njs-IA-ivE"/>
@@ -173,8 +199,4 @@
             <point key="canvasLocation" x="2068.1159420289855" y="37.5"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="calendar" catalog="system" width="128" height="106"/>
-        <image name="square.and.pencil" catalog="system" width="128" height="118"/>
-    </resources>
 </document>
