@@ -12,6 +12,7 @@
 		B41CB77F24587B8700BC8958 /* SpillTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B41CB77E24587B8700BC8958 /* SpillTableViewCell.swift */; };
 		B41CB78124587C3C00BC8958 /* SpillTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B41CB78024587C3C00BC8958 /* SpillTableViewController.swift */; };
 		B41CB783245889F600BC8958 /* CreateNote.swift in Sources */ = {isa = PBXBuildFile; fileRef = B41CB782245889F600BC8958 /* CreateNote.swift */; };
+		B48A97602459E3C100A4FE6C /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48A975F2459E3C100A4FE6C /* DetailViewController.swift */; };
 		B48FAE012457405200D4A3EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48FAE002457405200D4A3EE /* AppDelegate.swift */; };
 		B48FAE032457405200D4A3EE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48FAE022457405200D4A3EE /* SceneDelegate.swift */; };
 		B48FAE082457405200D4A3EE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B48FAE062457405200D4A3EE /* Main.storyboard */; };
@@ -25,6 +26,7 @@
 		B41CB77E24587B8700BC8958 /* SpillTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpillTableViewCell.swift; sourceTree = "<group>"; };
 		B41CB78024587C3C00BC8958 /* SpillTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpillTableViewController.swift; sourceTree = "<group>"; };
 		B41CB782245889F600BC8958 /* CreateNote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNote.swift; sourceTree = "<group>"; };
+		B48A975F2459E3C100A4FE6C /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		B48FADFD2457405200D4A3EE /* CreateDaily.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CreateDaily.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B48FAE002457405200D4A3EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B48FAE022457405200D4A3EE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -71,6 +73,7 @@
 				B41CB78024587C3C00BC8958 /* SpillTableViewController.swift */,
 				B41CB77A24587B2200BC8958 /* CreateNoteViewController.swift */,
 				B41CB77C24587B4900BC8958 /* ReminderViewController.swift */,
+				B48A975F2459E3C100A4FE6C /* DetailViewController.swift */,
 				B41CB7842458D96200BC8958 /* Resources */,
 			);
 			path = "View Controllers";
@@ -181,6 +184,7 @@
 				B41CB77B24587B2200BC8958 /* CreateNoteViewController.swift in Sources */,
 				B41CB78124587C3C00BC8958 /* SpillTableViewController.swift in Sources */,
 				B48FAE032457405200D4A3EE /* SceneDelegate.swift in Sources */,
+				B48A97602459E3C100A4FE6C /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

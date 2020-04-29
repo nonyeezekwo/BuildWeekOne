@@ -10,13 +10,11 @@ import UIKit
 
 class SpillTableViewCell: UITableViewCell {
     //MARK: - OUTLETS
+    @IBOutlet weak var titleLabel: UILabel!
     
-    
-    
-    
-    
-    
-  var notes: [Notes] = []
+    @IBOutlet weak var subtitleLabel: UILabel!
+  
+    var notes: [Notes] = []
 
     override func awakeFromNib() {
         super.awakeFromNib()

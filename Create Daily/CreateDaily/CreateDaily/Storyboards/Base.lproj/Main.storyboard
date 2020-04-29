@@ -7,50 +7,19 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Detail View Controller-->
         <scene sceneID="F47-hK-8BT">
             <objects>
-                <viewController id="rBz-Od-goQ" sceneMemberID="viewController">
+                <viewController id="rBz-Od-goQ" customClass="DetailViewController" customModule="CreateDaily" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="LuQ-8F-azA">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="fFF-ST-cYF">
-                                <rect key="frame" x="0.0" y="254" width="414" height="216"/>
-                                <connections>
-                                    <action selector="datePickerSwiped:" destination="KXf-x1-xv9" eventType="valueChanged" id="cJa-oS-Qbo"/>
-                                </connections>
-                            </datePicker>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Set the date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r64-4m-Lgv">
-                                <rect key="frame" x="138.5" y="198" width="137" height="48"/>
-                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="30"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j1D-jB-iwf">
-                                <rect key="frame" x="143.5" y="478" width="127" height="30"/>
-                                <state key="normal" title="Ready, set, note it."/>
-                                <connections>
-                                    <action selector="dateSetTapped:" destination="KXf-x1-xv9" eventType="touchUpInside" id="hbp-KC-TQO"/>
-                                </connections>
-                            </button>
-                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <constraints>
-                            <constraint firstItem="j1D-jB-iwf" firstAttribute="centerX" secondItem="LuQ-8F-azA" secondAttribute="centerX" id="Mfo-k2-iSz"/>
-                            <constraint firstItem="j1D-jB-iwf" firstAttribute="top" secondItem="fFF-ST-cYF" secondAttribute="bottom" constant="8" id="PdN-dz-TRz"/>
-                            <constraint firstItem="fFF-ST-cYF" firstAttribute="top" secondItem="9GU-Bc-BPr" secondAttribute="top" constant="166" id="dFI-oS-wkW"/>
-                            <constraint firstItem="fFF-ST-cYF" firstAttribute="leading" secondItem="9GU-Bc-BPr" secondAttribute="leading" id="eDw-hk-zh9"/>
-                            <constraint firstItem="fFF-ST-cYF" firstAttribute="trailing" secondItem="9GU-Bc-BPr" secondAttribute="trailing" id="fXs-K3-4CI"/>
-                            <constraint firstItem="r64-4m-Lgv" firstAttribute="centerX" secondItem="LuQ-8F-azA" secondAttribute="centerX" id="ozm-eD-ay2"/>
-                            <constraint firstItem="r64-4m-Lgv" firstAttribute="top" secondItem="9GU-Bc-BPr" secondAttribute="top" constant="110" id="yjd-ZC-gCw"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="9GU-Bc-BPr"/>
                     </view>
                     <navigationItem key="navigationItem" id="U26-5M-D7u"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vAM-gs-meo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <exit id="KXf-x1-xv9" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="3897" y="421"/>
         </scene>
@@ -71,7 +40,6 @@
                                         <state key="normal" title="Remind me"/>
                                         <connections>
                                             <action selector="noteReminderTapped:" destination="6dx-OS-R30" eventType="touchUpInside" id="1fB-LM-cLg"/>
-                                            <segue destination="rBz-Od-goQ" kind="show" identifier="ReminderSegue" id="9Ej-Vu-qTj"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qxf-6f-VJI">
@@ -137,10 +105,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SpillCell" textLabel="7xN-TZ-IVy" detailTextLabel="Lmp-WD-LmV" rowHeight="144" style="IBUITableViewCellStyleSubtitle" id="RRf-KM-wGQ">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SpillCell" textLabel="7xN-TZ-IVy" detailTextLabel="Lmp-WD-LmV" rowHeight="144" style="IBUITableViewCellStyleSubtitle" id="RRf-KM-wGQ" customClass="SpillTableViewCell" customModule="CreateDaily" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="144"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="RRf-KM-wGQ" id="Zsj-nS-H9c">
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="RRf-KM-wGQ" id="Zsj-nS-H9c" customClass="SpillTableViewCell" customModule="CreateDaily" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="144"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
@@ -151,7 +119,7 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Lmp-WD-LmV">
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Lmp-WD-LmV">
                                             <rect key="frame" x="20" y="75.5" width="44" height="14.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
@@ -160,6 +128,11 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="subtitleLabel" destination="Lmp-WD-LmV" id="31n-6B-NLb"/>
+                                    <outlet property="titleLabel" destination="7xN-TZ-IVy" id="4Gp-eN-HMg"/>
+                                    <segue destination="rBz-Od-goQ" kind="presentation" identifier="NoteDetailSegue" modalPresentationStyle="fullScreen" id="Vaq-tD-nZf"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <sections/>
