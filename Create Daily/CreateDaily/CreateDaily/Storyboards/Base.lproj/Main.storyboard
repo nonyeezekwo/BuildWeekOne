@@ -16,19 +16,20 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DZE-fy-Vuk">
-                                <rect key="frame" x="20" y="198" width="374" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="20" y="198" width="374" height="24"/>
+                                <fontDescription key="fontDescription" name="Galvji" family="Galvji" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MSl-eC-TOb">
-                                <rect key="frame" x="20" y="238.5" width="374" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="20" y="242" width="374" height="20.5"/>
+                                <fontDescription key="fontDescription" name="Galvji" family="Galvji" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemGray2Color" red="0.68235294120000001" green="0.68235294120000001" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="9GU-Bc-BPr" firstAttribute="trailing" secondItem="MSl-eC-TOb" secondAttribute="trailing" constant="20" id="6s7-oj-T2M"/>
                             <constraint firstItem="9GU-Bc-BPr" firstAttribute="trailing" secondItem="DZE-fy-Vuk" secondAttribute="trailing" constant="20" id="Cjl-6R-vNM"/>
@@ -57,50 +58,51 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="102" translatesAutoresizingMaskIntoConstraints="NO" id="ue0-1P-Cns">
-                                <rect key="frame" x="145" y="428" width="124" height="40"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qxf-6f-VJI">
-                                        <rect key="frame" x="0.0" y="0.0" width="124" height="40"/>
-                                        <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="17"/>
-                                        <state key="normal" title="Ready, Set, Note it!">
-                                            <color key="titleColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="saveNoteTapped:" destination="6dx-OS-R30" eventType="touchUpInside" id="sO5-a4-35j"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                            </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What's on your mind?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PUf-ce-EWC">
-                                <rect key="frame" x="82.5" y="114" width="249.5" height="48"/>
-                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="30"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <rect key="frame" x="81.5" y="114" width="251" height="36.5"/>
+                                <fontDescription key="fontDescription" name="BodoniSvtyTwoOSITCTT-Book" family="Bodoni 72 Oldstyle" pointSize="30"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="7CF-Ti-MoY">
                                 <rect key="frame" x="29" y="223" width="356" height="178"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="backgroundColor" red="0.82663450770000002" green="0.83252852399999999" blue="0.85021057280000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" name="Galvji" family="Galvji" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Note Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Eoa-1x-B6Z">
-                                <rect key="frame" x="29" y="181" width="356" height="34"/>
-                                <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <rect key="frame" x="29" y="169.5" width="356" height="34"/>
+                                <color key="backgroundColor" red="0.82663450767122448" green="0.83252852396027122" blue="0.85021057282741119" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" name="Galvji" family="Galvji" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KPf-kT-ViZ">
+                                <rect key="frame" x="60" y="426" width="294" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="40" id="xdy-3u-XU2"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="BodoniSvtyTwoOSITCTT-Book" family="Bodoni 72 Oldstyle" pointSize="20"/>
+                                <state key="normal" title="Ready, Set, Note It">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="saveNoteTapped:" destination="6dx-OS-R30" eventType="touchUpInside" id="34e-yF-ToL"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemGray2Color" red="0.68235294120000001" green="0.68235294120000001" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" red="0.45738439860000002" green="0.71917461969999996" blue="0.73559473600000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="PUf-ce-EWC" firstAttribute="top" secondItem="tS0-cd-aLD" secondAttribute="top" constant="26" id="Bv7-3Z-Ekz"/>
-                            <constraint firstItem="ue0-1P-Cns" firstAttribute="centerX" secondItem="SlE-5Y-wLj" secondAttribute="centerX" id="EAm-ti-eJi"/>
-                            <constraint firstItem="ue0-1P-Cns" firstAttribute="centerY" secondItem="SlE-5Y-wLj" secondAttribute="centerY" id="IWg-JX-7hU"/>
+                            <constraint firstItem="tS0-cd-aLD" firstAttribute="bottom" secondItem="KPf-kT-ViZ" secondAttribute="bottom" constant="399" id="Exs-MR-pga"/>
                             <constraint firstItem="tS0-cd-aLD" firstAttribute="trailing" secondItem="Eoa-1x-B6Z" secondAttribute="trailing" constant="29" id="J32-rR-H0h"/>
                             <constraint firstItem="Eoa-1x-B6Z" firstAttribute="top" secondItem="PUf-ce-EWC" secondAttribute="bottom" constant="19" id="M6a-ZB-A0m"/>
                             <constraint firstItem="Eoa-1x-B6Z" firstAttribute="centerX" secondItem="SlE-5Y-wLj" secondAttribute="centerX" id="kom-wR-qHZ"/>
+                            <constraint firstItem="tS0-cd-aLD" firstAttribute="trailing" secondItem="KPf-kT-ViZ" secondAttribute="trailing" constant="60" id="l9W-FP-MyE"/>
+                            <constraint firstItem="KPf-kT-ViZ" firstAttribute="leading" secondItem="tS0-cd-aLD" secondAttribute="leading" constant="60" id="rah-zI-oeH"/>
                             <constraint firstItem="PUf-ce-EWC" firstAttribute="centerX" secondItem="SlE-5Y-wLj" secondAttribute="centerX" id="z4r-6E-3sr"/>
                             <constraint firstItem="Eoa-1x-B6Z" firstAttribute="leading" secondItem="tS0-cd-aLD" secondAttribute="leading" constant="29" id="z6r-8y-YCF"/>
                         </constraints>
@@ -108,6 +110,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="jCg-FE-E4a"/>
                     <connections>
+                        <outlet property="noteSaveButton" destination="KPf-kT-ViZ" id="Rsy-9t-g3t"/>
                         <outlet property="noteTextView" destination="7CF-Ti-MoY" id="rFy-12-wf7"/>
                         <outlet property="noteTitleTextField" destination="Eoa-1x-B6Z" id="7Vt-nd-rPO"/>
                     </connections>
@@ -123,8 +126,10 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Bhg-OP-i9g">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <color key="separatorColor" systemColor="systemGray2Color" red="0.68235294120000001" green="0.68235294120000001" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.82663450770000002" green="0.83252852399999999" blue="0.85021057280000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="separatorColor" red="0.82663450770000002" green="0.83252852399999999" blue="0.85021057280000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="sectionIndexBackgroundColor" red="0.82663450770000002" green="0.83252852399999999" blue="0.85021057280000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="sectionIndexTrackingBackgroundColor" red="0.82663450770000002" green="0.83252852399999999" blue="0.85021057280000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="SpillCell" textLabel="7xN-TZ-IVy" detailTextLabel="Lmp-WD-LmV" rowHeight="144" style="IBUITableViewCellStyleSubtitle" id="RRf-KM-wGQ" customClass="SpillTableViewCell" customModule="CreateDaily" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="144"/>
@@ -134,21 +139,22 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="7xN-TZ-IVy">
-                                            <rect key="frame" x="20" y="52" width="33.5" height="20.5"/>
+                                            <rect key="frame" x="20" y="49" width="38.5" height="20.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <fontDescription key="fontDescription" name="Galvji-Bold" family="Galvji" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Lmp-WD-LmV">
-                                            <rect key="frame" x="20" y="75.5" width="44" height="14.5"/>
+                                            <rect key="frame" x="20" y="72.5" width="66.5" height="20.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <fontDescription key="fontDescription" name="Galvji" family="Galvji" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" systemColor="systemGray2Color" red="0.68235294120000001" green="0.68235294120000001" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <outlet property="subtitleLabel" destination="Lmp-WD-LmV" id="31n-6B-NLb"/>
                                     <outlet property="titleLabel" destination="7xN-TZ-IVy" id="4Gp-eN-HMg"/>

@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		B41CB77B24587B2200BC8958 /* CreateNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B41CB77A24587B2200BC8958 /* CreateNoteViewController.swift */; };
-		B41CB77D24587B4900BC8958 /* ReminderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B41CB77C24587B4900BC8958 /* ReminderViewController.swift */; };
 		B41CB77F24587B8700BC8958 /* SpillTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B41CB77E24587B8700BC8958 /* SpillTableViewCell.swift */; };
 		B41CB78124587C3C00BC8958 /* SpillTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B41CB78024587C3C00BC8958 /* SpillTableViewController.swift */; };
 		B41CB783245889F600BC8958 /* CreateNote.swift in Sources */ = {isa = PBXBuildFile; fileRef = B41CB782245889F600BC8958 /* CreateNote.swift */; };
@@ -23,7 +22,6 @@
 
 /* Begin PBXFileReference section */
 		B41CB77A24587B2200BC8958 /* CreateNoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNoteViewController.swift; sourceTree = "<group>"; };
-		B41CB77C24587B4900BC8958 /* ReminderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderViewController.swift; sourceTree = "<group>"; };
 		B41CB77E24587B8700BC8958 /* SpillTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpillTableViewCell.swift; sourceTree = "<group>"; };
 		B41CB78024587C3C00BC8958 /* SpillTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpillTableViewController.swift; sourceTree = "<group>"; };
 		B41CB782245889F600BC8958 /* CreateNote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNote.swift; sourceTree = "<group>"; };
@@ -74,7 +72,6 @@
 			children = (
 				B41CB78024587C3C00BC8958 /* SpillTableViewController.swift */,
 				B41CB77A24587B2200BC8958 /* CreateNoteViewController.swift */,
-				B41CB77C24587B4900BC8958 /* ReminderViewController.swift */,
 				B48A975F2459E3C100A4FE6C /* DetailViewController.swift */,
 				B496EB3D245A455900CDD5D9 /* Models */,
 				B41CB7842458D96200BC8958 /* Resources */,
@@ -188,7 +185,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B41CB77D24587B4900BC8958 /* ReminderViewController.swift in Sources */,
 				B41CB77F24587B8700BC8958 /* SpillTableViewCell.swift in Sources */,
 				B496EB3C245A429F00CDD5D9 /* CreateModel.swift in Sources */,
 				B48FAE012457405200D4A3EE /* AppDelegate.swift in Sources */,
@@ -343,7 +339,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JKA99996Q5;
 				INFOPLIST_FILE = CreateDaily/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -362,7 +358,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JKA99996Q5;
 				INFOPLIST_FILE = CreateDaily/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
