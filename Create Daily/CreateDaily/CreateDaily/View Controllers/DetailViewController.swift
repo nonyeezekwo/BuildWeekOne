@@ -10,16 +10,23 @@ import UIKit
 
 class DetailViewController: UIViewController {
 
+    @IBOutlet weak var noteDetailTitle: UILabel!
+
+    @IBOutlet weak var noteDetailSubtitle: UILabel!
     var notes: [Notes] = []
-    
     var detailVC: [Notes] = []
+    
+    var noteTitle = ""
+    var subtitle = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        //This is where i will enter it what was passed from the segue created in SpillTableViewController
+        noteDetailTitle.text = noteTitle
+        noteDetailSubtitle.text = subtitle
     }
     
+
 
     /*
     // MARK: - Navigation

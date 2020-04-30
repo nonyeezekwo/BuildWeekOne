@@ -14,14 +14,40 @@
                     <view key="view" contentMode="scaleToFill" id="LuQ-8F-azA">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DZE-fy-Vuk">
+                                <rect key="frame" x="20" y="198" width="374" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MSl-eC-TOb">
+                                <rect key="frame" x="20" y="238.5" width="374" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemGray2Color" red="0.68235294120000001" green="0.68235294120000001" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="9GU-Bc-BPr" firstAttribute="trailing" secondItem="MSl-eC-TOb" secondAttribute="trailing" constant="20" id="6s7-oj-T2M"/>
+                            <constraint firstItem="9GU-Bc-BPr" firstAttribute="trailing" secondItem="DZE-fy-Vuk" secondAttribute="trailing" constant="20" id="Cjl-6R-vNM"/>
+                            <constraint firstItem="MSl-eC-TOb" firstAttribute="leading" secondItem="9GU-Bc-BPr" secondAttribute="leading" constant="20" id="SnD-hg-vGI"/>
+                            <constraint firstItem="DZE-fy-Vuk" firstAttribute="top" secondItem="9GU-Bc-BPr" secondAttribute="top" constant="110" id="oR9-5p-EfL"/>
+                            <constraint firstItem="MSl-eC-TOb" firstAttribute="top" secondItem="DZE-fy-Vuk" secondAttribute="bottom" constant="20" id="qHf-GJ-gDH"/>
+                            <constraint firstItem="DZE-fy-Vuk" firstAttribute="leading" secondItem="9GU-Bc-BPr" secondAttribute="leading" constant="20" id="sKM-N8-beP"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="9GU-Bc-BPr"/>
                     </view>
                     <navigationItem key="navigationItem" id="U26-5M-D7u"/>
+                    <connections>
+                        <outlet property="noteDetailSubtitle" destination="MSl-eC-TOb" id="OlL-Xy-QqJ"/>
+                        <outlet property="noteDetailTitle" destination="DZE-fy-Vuk" id="tzE-Ot-4PD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vAM-gs-meo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3897" y="421"/>
+            <point key="canvasLocation" x="3895.652173913044" y="420.53571428571428"/>
         </scene>
         <!--Create Note View Controller-->
         <scene sceneID="LFs-ch-Fcb">
@@ -100,11 +126,11 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <color key="separatorColor" systemColor="systemGray2Color" red="0.68235294120000001" green="0.68235294120000001" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SpillCell" textLabel="7xN-TZ-IVy" detailTextLabel="Lmp-WD-LmV" rowHeight="144" style="IBUITableViewCellStyleSubtitle" id="RRf-KM-wGQ" customClass="SpillTableViewCell" customModule="CreateDaily" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="SpillCell" textLabel="7xN-TZ-IVy" detailTextLabel="Lmp-WD-LmV" rowHeight="144" style="IBUITableViewCellStyleSubtitle" id="RRf-KM-wGQ" customClass="SpillTableViewCell" customModule="CreateDaily" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="144"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="RRf-KM-wGQ" id="Zsj-nS-H9c" customClass="SpillTableViewCell" customModule="CreateDaily" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="144"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="383" height="144"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="7xN-TZ-IVy">
@@ -126,7 +152,6 @@
                                 <connections>
                                     <outlet property="subtitleLabel" destination="Lmp-WD-LmV" id="31n-6B-NLb"/>
                                     <outlet property="titleLabel" destination="7xN-TZ-IVy" id="4Gp-eN-HMg"/>
-                                    <segue destination="rBz-Od-goQ" kind="presentation" identifier="NoteDetailSegue" modalPresentationStyle="fullScreen" id="Vaq-tD-nZf"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -143,6 +168,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="rBz-Od-goQ" kind="show" identifier="NoteDetailSegue" id="pU8-bP-hmB"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qbk-Vg-yYS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

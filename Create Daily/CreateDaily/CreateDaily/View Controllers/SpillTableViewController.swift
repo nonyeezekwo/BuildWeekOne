@@ -50,16 +50,16 @@ class SpillTableViewController: UITableViewController {
             newNoteVC.delegate = self
             }
         } else if segue.identifier == "NoteDetailSegue" {
-            let indexPath = tableView.indexPathForSelectedRow,
-            detailVC = segue.destination as? DetailViewController
-            
-            
+            let indexPath = sender as? Int ?? 0
+            let note = notes[indexPath]
+            let detailVC = segue.destination as? DetailViewController
+            detailVC?.noteTitle = note.noteTitle
+            detailVC?.subtitle = note.noteDescription ?? ""
         }
     }
     //MARK: - Clicking on cell to Detail VC
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
-        performSegue(withIdentifier: "NoteDetailSegue", sender: self)
+        performSegue(withIdentifier: "NoteDetailSegue", sender: indexPath.row)
     }
     
 }
