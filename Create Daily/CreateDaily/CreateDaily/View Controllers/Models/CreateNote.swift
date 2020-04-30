@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Notes {
+struct Notes: Encodable, Decodable {
     var noteTitle: String
     var noteDescription: String?
 }

@@ -14,7 +14,7 @@
                     <view key="view" contentMode="scaleToFill" id="LuQ-8F-azA">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" systemColor="systemGray2Color" red="0.68235294120000001" green="0.68235294120000001" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="9GU-Bc-BPr"/>
                     </view>
                     <navigationItem key="navigationItem" id="U26-5M-D7u"/>
@@ -32,20 +32,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="102" translatesAutoresizingMaskIntoConstraints="NO" id="ue0-1P-Cns">
-                                <rect key="frame" x="85.5" y="430" width="243" height="36"/>
+                                <rect key="frame" x="145" y="428" width="124" height="40"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="toh-tv-AiH">
-                                        <rect key="frame" x="0.0" y="0.0" width="98" height="36"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                        <state key="normal" title="Remind me"/>
-                                        <connections>
-                                            <action selector="noteReminderTapped:" destination="6dx-OS-R30" eventType="touchUpInside" id="1fB-LM-cLg"/>
-                                        </connections>
-                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qxf-6f-VJI">
-                                        <rect key="frame" x="200" y="0.0" width="43" height="36"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                        <state key="normal" title="Save"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="124" height="40"/>
+                                        <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="17"/>
+                                        <state key="normal" title="Ready, Set, Note it!">
+                                            <color key="titleColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
                                         <connections>
                                             <action selector="saveNoteTapped:" destination="6dx-OS-R30" eventType="touchUpInside" id="sO5-a4-35j"/>
                                         </connections>
@@ -55,7 +49,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What's on your mind?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PUf-ce-EWC">
                                 <rect key="frame" x="82.5" y="114" width="249.5" height="48"/>
                                 <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="30"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="7CF-Ti-MoY">
@@ -73,7 +67,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" systemColor="systemGray2Color" red="0.68235294120000001" green="0.68235294120000001" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="PUf-ce-EWC" firstAttribute="top" secondItem="tS0-cd-aLD" secondAttribute="top" constant="26" id="Bv7-3Z-Ekz"/>
                             <constraint firstItem="ue0-1P-Cns" firstAttribute="centerX" secondItem="SlE-5Y-wLj" secondAttribute="centerX" id="EAm-ti-eJi"/>
@@ -104,6 +98,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="separatorColor" systemColor="systemGray2Color" red="0.68235294120000001" green="0.68235294120000001" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SpillCell" textLabel="7xN-TZ-IVy" detailTextLabel="Lmp-WD-LmV" rowHeight="144" style="IBUITableViewCellStyleSubtitle" id="RRf-KM-wGQ" customClass="SpillTableViewCell" customModule="CreateDaily" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="144"/>

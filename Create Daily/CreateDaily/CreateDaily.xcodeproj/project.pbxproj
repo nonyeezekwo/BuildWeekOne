@@ -18,6 +18,7 @@
 		B48FAE082457405200D4A3EE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B48FAE062457405200D4A3EE /* Main.storyboard */; };
 		B48FAE0A2457405400D4A3EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B48FAE092457405400D4A3EE /* Assets.xcassets */; };
 		B48FAE0D2457405400D4A3EE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B48FAE0B2457405400D4A3EE /* LaunchScreen.storyboard */; };
+		B496EB3C245A429F00CDD5D9 /* CreateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B496EB3B245A429F00CDD5D9 /* CreateModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		B48FAE092457405400D4A3EE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B48FAE0C2457405400D4A3EE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B48FAE0E2457405400D4A3EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B496EB3B245A429F00CDD5D9 /* CreateModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,8 +62,8 @@
 		B41CB7852458D97400BC8958 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
+				B41CB77E24587B8700BC8958 /* SpillTableViewCell.swift */,
 				B48FAE062457405200D4A3EE /* Main.storyboard */,
-				B41CB782245889F600BC8958 /* CreateNote.swift */,
 				B48FAE0B2457405400D4A3EE /* LaunchScreen.storyboard */,
 			);
 			path = Storyboards;
@@ -74,6 +76,7 @@
 				B41CB77A24587B2200BC8958 /* CreateNoteViewController.swift */,
 				B41CB77C24587B4900BC8958 /* ReminderViewController.swift */,
 				B48A975F2459E3C100A4FE6C /* DetailViewController.swift */,
+				B496EB3D245A455900CDD5D9 /* Models */,
 				B41CB7842458D96200BC8958 /* Resources */,
 			);
 			path = "View Controllers";
@@ -100,10 +103,18 @@
 			children = (
 				B41CB7852458D97400BC8958 /* Storyboards */,
 				B41CB7862458D9A100BC8958 /* View Controllers */,
-				B41CB77E24587B8700BC8958 /* SpillTableViewCell.swift */,
 				B48FAE0E2457405400D4A3EE /* Info.plist */,
 			);
 			path = CreateDaily;
+			sourceTree = "<group>";
+		};
+		B496EB3D245A455900CDD5D9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B41CB782245889F600BC8958 /* CreateNote.swift */,
+				B496EB3B245A429F00CDD5D9 /* CreateModel.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -179,6 +190,7 @@
 			files = (
 				B41CB77D24587B4900BC8958 /* ReminderViewController.swift in Sources */,
 				B41CB77F24587B8700BC8958 /* SpillTableViewCell.swift in Sources */,
+				B496EB3C245A429F00CDD5D9 /* CreateModel.swift in Sources */,
 				B48FAE012457405200D4A3EE /* AppDelegate.swift in Sources */,
 				B41CB783245889F600BC8958 /* CreateNote.swift in Sources */,
 				B41CB77B24587B2200BC8958 /* CreateNoteViewController.swift in Sources */,

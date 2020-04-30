@@ -50,7 +50,10 @@ class SpillTableViewController: UITableViewController {
             newNoteVC.delegate = self
             }
         } else if segue.identifier == "NoteDetailSegue" {
-            let indexPath = tableView.indexPathForSelectedRow as? DetailViewController
+            let indexPath = tableView.indexPathForSelectedRow,
+            detailVC = segue.destination as? DetailViewController
+            
+            
         }
     }
     //MARK: - Clicking on cell to Detail VC

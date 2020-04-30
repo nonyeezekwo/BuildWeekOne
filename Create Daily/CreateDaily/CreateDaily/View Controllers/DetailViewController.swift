@@ -12,11 +12,12 @@ class DetailViewController: UIViewController {
 
     var notes: [Notes] = []
     
+    var detailVC: [Notes] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
+        //This is where i will enter it what was passed from the segue created in SpillTableViewController
     }
     
 
